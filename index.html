@@ -18,7 +18,7 @@
 :root{--bg:#06070a;--panel:#0a0c12;--panel2:#101522;--border:rgba(255,255,255,.10);--text:#f5f7fa;--muted:#98a1b3;--accent:#3b82f6;--accent2:#7aa7ff;--green:#2ecc71;--amber:#ffc048;--red:#ff6b6b;--code-bg:#070a11}
 html{scroll-behavior:smooth}
 body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);line-height:1.9;overflow-x:hidden}
-code,pre{font-family:'JetBrains Mono',monospace;direction:ltr;text-align:left}
+code,pre{font-family:'JetBrains Mono',monospace;direction:ltr;text-align:left;font-variant-ligatures:none}
 a{color:var(--accent2)}
 .topbar{position:sticky;top:0;z-index:50;background:rgba(6,7,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
 .topbar-inner{max-width:1000px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
@@ -110,7 +110,7 @@ const save=()=>{try{localStorage.setItem(LS,JSON.stringify(st))}catch(e){}};
 let cur=T[0].id,lvl=null,q='';
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const L={e:'سهل',m:'متوسط',h:'صعب'};
-function fmt(t){return t.split(/```(?:\w+)?\n/).map((p,i)=>{if(i%2){return '<pre><code>'+esc(p.replace(/\n$/,''))+'</code></pre>'}
+function fmt(t){return t.split(/```(?:\w+)?\n/).map((p,i)=>{if(i%2){return '<pre><code>'+esc(p.replace(/\n?```\s*$/,'').replace(/\n$/,''))+'</code></pre>'}
 return p.split('\n').filter(Boolean).map(x=>'<p>'+esc(x).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/`([^`]+)`/g,'<code class="i">$1</code>')+'</p>').join('')}).join('')}
 const total=T.reduce((a,t)=>a+t.q.length,0);
 document.getElementById('pt').textContent=total;document.getElementById('sq').textContent=total;document.getElementById('sp').textContent=P.length;
