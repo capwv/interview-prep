@@ -12,17 +12,17 @@ window.FIELDS=[
 [
 "e",
 "إيه الفرق بين عناصر block و inline و inline-block؟",
-"الـ `block` بياخد العرض كله وبيبدأ سطر جديد (div, p). الـ `inline` بياخد حجم محتواه بس ومبيقبلش width وheight (span, a). الـ `inline-block` بيقف جنب غيره في نفس السطر بس بيقبل width وheight وmargin وpadding رأسي."
+"الـ `block` بياخد العرض كله وبيبدأ سطر جديد (div, p). الـ `inline` بياخد حجم محتواه بس ومبيقبلش width و height (span, a). الـ `inline-block` بيقف جنب غيره في نفس السطر بس بيقبل width و height و margin و padding رأسي."
 ],
 [
 "e",
 "إيه هي الـ Semantic HTML وليه مهمة؟",
-"هي استخدام وسوم بتوصف معنى المحتوى زي `header` و`nav` و`main` و`article` و`section` و`footer` بدل div في كل حتة. فايدتها: SEO أحسن، وسهولة وصول لقارئات الشاشة (accessibility)، وكود أسهل في القراءة."
+"هي استخدام وسوم بتوصف معنى المحتوى زي `header` و `nav` و `main` و `article` و `section` و `footer` بدل div في كل حتة. فايدتها: SEO أحسن، وسهولة وصول لقارئات الشاشة (accessibility)، وكود أسهل في القراءة."
 ],
 [
 "e",
 "اشرح الـ Box Model.",
-"كل عنصر صندوق من الجوه للبرا: content ثم padding ثم border ثم margin. الافتراضي إن `width` بتحسب الـ content بس. مع `box-sizing: border-box` الـ width بتشمل padding وborder وده بيخلي الحسابات أسهل.\n```css\n*, *::before, *::after { box-sizing: border-box; }\n```"
+"كل عنصر صندوق من الجوه للبرا: content ثم padding ثم border ثم margin. الافتراضي إن `width` بتحسب الـ content بس. مع `box-sizing: border-box` الـ width بتشمل padding و border وده بيخلي الحسابات أسهل.\n```css\n*, *::before, *::after { box-sizing: border-box; }\n```"
 ],
 [
 "m",
@@ -37,7 +37,7 @@ window.FIELDS=[
 [
 "m",
 "يعني إيه Responsive Design؟ وإزاي تعمله؟",
-"الصفحة تتأقلم مع كل أحجام الشاشات. الأساسيات: وسم الـ viewport، وحدات مرنة (%, rem, fr)، Flexbox وGrid، وـ media queries. والأفضل نبدأ Mobile First.\n```html\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n```\n```css\n.card { width: 100%; }\n@media (min-width: 768px) { .card { width: 48%; } }\n```"
+"الصفحة تتأقلم مع كل أحجام الشاشات. الأساسيات: وسم الـ viewport، وحدات مرنة (%, rem, fr)، Flexbox و Grid، وـ media queries. والأفضل نبدأ Mobile First.\n```html\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n```\n```css\n.card { width: 100%; }\n@media (min-width: 768px) { .card { width: 48%; } }\n```"
 ],
 [
 "m",
@@ -59,7 +59,7 @@ window.FIELDS=[
 [
 "e",
 "إيه الفرق بين var و let و const؟",
-"`var` نطاقه الدالة (function scope) وبيتعمل له hoisting ويتقرا قبل التعريف كـ undefined. `let` و`const` نطاقهم البلوك `{}` ومينفعش تستخدمهم قبل التعريف (Temporal Dead Zone). `const` مينفعش تعيد إسناده، بس لو قيمته object أو array تقدر تعدل محتواه."
+"`var` نطاقه الدالة (function scope) وبيتعمل له hoisting ويتقرا قبل التعريف كـ undefined. `let` و `const` نطاقهم البلوك `{}` ومينفعش تستخدمهم قبل التعريف (Temporal Dead Zone). `const` مينفعش تعيد إسناده، بس لو قيمته object أو array تقدر تعدل محتواه."
 ],
 [
 "e",
@@ -79,7 +79,7 @@ window.FIELDS=[
 [
 "m",
 "إيه الفرق بين Promise و async/await؟",
-"`async/await` هو شكل أسهل في الكتابة فوق الـ Promises. الدالة `async` بترجع Promise دايماً، و`await` بيوقف تنفيذ الدالة لحد ما الـ Promise يخلص. بنستخدم `try/catch` للأخطاء.\n```js\nasync function getUser(id) {\n  try {\n    const res = await fetch('/api/users/' + id);\n    if (!res.ok) throw new Error('HTTP ' + res.status);\n    return await res.json();\n  } catch (err) {\n    console.error(err);\n  }\n}\n```"
+"`async/await` هو شكل أسهل في الكتابة فوق الـ Promises. الدالة `async` بترجع Promise دايماً، و `await` بيوقف تنفيذ الدالة لحد ما الـ Promise يخلص. بنستخدم `try/catch` للأخطاء.\n```js\nasync function getUser(id) {\n  try {\n    const res = await fetch('/api/users/' + id);\n    if (!res.ok) throw new Error('HTTP ' + res.status);\n    return await res.json();\n  } catch (err) {\n    console.error(err);\n  }\n}\n```"
 ],
 [
 "m",
@@ -121,12 +121,12 @@ window.FIELDS=[
 [
 "e",
 "تعمل إيه لما يحصل merge conflict؟",
-"Git بيعلّم الأجزاء المتعارضة بين `<<<<<<<` و`=======` و`>>>>>>>`. أفتح الملف، اختار أو ادمج الكود الصح، امسح العلامات، وبعدين `git add` للملف و`git commit` (أو `git rebase --continue` لو في rebase)."
+"Git بيعلّم الأجزاء المتعارضة بين `<<<<<<<` و `=======` و `>>>>>>>`. أفتح الملف، اختار أو ادمج الكود الصح، امسح العلامات، وبعدين `git add` للملف و `git commit` (أو `git rebase --continue` لو في rebase)."
 ],
 [
 "e",
 "إيه الفرق بين HTTP methods: GET و POST و PUT و DELETE؟",
-"`GET` لقراءة بيانات ومبيغيرش حاجة. `POST` لإنشاء مورد جديد. `PUT` لاستبدال مورد بالكامل (و`PATCH` لتعديل جزء). `DELETE` للمسح. GET وPUT وDELETE بتكون idempotent يعني تكرارها مبيغيرش النتيجة."
+"`GET` لقراءة بيانات ومبيغيرش حاجة. `POST` لإنشاء مورد جديد. `PUT` لاستبدال مورد بالكامل ( و `PATCH` لتعديل جزء). `DELETE` للمسح. GET و PUT و DELETE بتكون idempotent يعني تكرارها مبيغيرش النتيجة."
 ],
 [
 "m",
@@ -136,7 +136,7 @@ window.FIELDS=[
 [
 "m",
 "إيه الفرق بين localStorage و sessionStorage و Cookies؟",
-"`localStorage` بيحفظ بيانات لحد ما تتمسح يدوياً (حوالي 5MB). `sessionStorage` بيتمسح بقفل التاب. الـ Cookies صغيرة (حوالي 4KB) وبتتبعت مع كل طلب للسيرفر، ولها تاريخ انتهاء وإعدادات أمان زي `HttpOnly` و`Secure`. متخزنش توكنات حساسة في localStorage لأن أي XSS يقدر يقراها."
+"`localStorage` بيحفظ بيانات لحد ما تتمسح يدوياً (حوالي 5MB). `sessionStorage` بيتمسح بقفل التاب. الـ Cookies صغيرة (حوالي 4KB) وبتتبعت مع كل طلب للسيرفر، ولها تاريخ انتهاء وإعدادات أمان زي `HttpOnly` و `Secure`. متخزنش توكنات حساسة في localStorage لأن أي XSS يقدر يقراها."
 ],
 [
 "h",
@@ -160,9 +160,9 @@ window.FIELDS=[
 "brief": "موقع شخصي من صفحة واحدة يعرّفك ومشاريعك ويشتغل كويس على الموبايل.",
 "data": "مفيش بيانات خارجية. اكتب محتواك بنفسك وصور مشاريعك.",
 "steps": [
-"ارسم تصميم بسيط (Figma أو ورقة): Hero وAbout وProjects وContact.",
-"اكتب HTML semantic بـ header وmain وsection وfooter.",
-"نسّق بـ CSS من الموبايل الأول مع Flexbox وGrid.",
+"ارسم تصميم بسيط (Figma أو ورقة): Hero و About و Projects و Contact.",
+"اكتب HTML semantic بـ header و main و section و footer.",
+"نسّق بـ CSS من الموبايل الأول مع Flexbox و Grid.",
 "أضف Dark mode toggle وحفظ الاختيار في localStorage.",
 "انشره على GitHub Pages وجرّبه على موبايل حقيقي."
 ],
@@ -185,8 +185,8 @@ window.FIELDS=[
 "brief": "أضف وعدّل وامسح مهام مع فلاتر (الكل، منجز، متبقي) وحفظ تلقائي.",
 "data": "البيانات بتتخزن في localStorage كـ JSON.",
 "steps": [
-"صمّم شكل المهمة كـ object فيه id وtext وdone.",
-"اكتب دوال add وtoggle وremove وrender.",
+"صمّم شكل المهمة كـ object فيه id و text و done.",
+"اكتب دوال add و toggle و remove و render.",
 "استخدم event delegation على القائمة.",
 "احفظ واسترجع من localStorage عند التحميل.",
 "أضف بحث وفلاتر وعداد المتبقي."
@@ -237,7 +237,7 @@ window.FIELDS=[
 [
 "e",
 "إيه الفرق بين Pointer و Reference في C++؟",
-"الـ Pointer متغير بيخزن عنوان، ممكن يبقى `nullptr` وممكن يتغير يشاور على حاجة تانية، وبنستخدم `*` و`->`. الـ Reference اسم تاني لمتغير موجود، لازم يتهيأ وقت التعريف ومينفعش يتغير ليشاور على غيره ومينفعش يبقى null.\n```cpp\nint x = 5;\nint* p = &x;   // pointer\nint& r = x;    // reference\n*p = 10;       // x = 10\nr = 20;        // x = 20\n```"
+"الـ Pointer متغير بيخزن عنوان، ممكن يبقى `nullptr` وممكن يتغير يشاور على حاجة تانية، وبنستخدم `*` و `->`. الـ Reference اسم تاني لمتغير موجود، لازم يتهيأ وقت التعريف ومينفعش يتغير ليشاور على غيره ومينفعش يبقى null.\n```cpp\nint x = 5;\nint* p = &x;   // pointer\nint& r = x;    // reference\n*p = 10;       // x = 10\nr = 20;        // x = 20\n```"
 ],
 [
 "e",
@@ -257,7 +257,7 @@ window.FIELDS=[
 [
 "m",
 "إيه هي الـ RAII؟",
-"Resource Acquisition Is Initialization: الـ resource (ذاكرة، ملف، قفل) بتتاخد في الـ constructor وبتتحرر في الـ destructor. فبتتحرر تلقائياً حتى لو حصل exception. أمثلة: smart pointers وstd::lock_guard وstd::fstream."
+"Resource Acquisition Is Initialization: الـ resource (ذاكرة، ملف، قفل) بتتاخد في الـ constructor وبتتحرر في الـ destructor. فبتتحرر تلقائياً حتى لو حصل exception. أمثلة: smart pointers و std::lock_guard و std::fstream."
 ],
 [
 "m",
@@ -294,7 +294,7 @@ window.FIELDS=[
 [
 "m",
 "إيه الفرق بين abstract class و interface؟",
-"الـ abstract class ممكن يحتوي على حالة (fields) وconstructors وmethods مُنفّذة، والكلاس بيورث من واحد بس. الـ interface بيحدد عقد، والكلاس ممكن ينفذ أكتر من interface، ومنذ Java 8 ممكن يكون فيه `default` methods. استخدم interface لـ \"يقدر يعمل\" وabstract class لـ \"هو نوع من\"."
+"الـ abstract class ممكن يحتوي على حالة (fields) و constructors و methods مُنفّذة، والكلاس بيورث من واحد بس. الـ interface بيحدد عقد، والكلاس ممكن ينفذ أكتر من interface، ومنذ Java 8 ممكن يكون فيه `default` methods. استخدم interface لـ \"يقدر يعمل\" و abstract class لـ \"هو نوع من\"."
 ],
 [
 "m",
@@ -309,7 +309,7 @@ window.FIELDS=[
 [
 "m",
 "إيه الأعمدة الأربعة للـ OOP؟",
-"Encapsulation: إخفاء البيانات وراء methods. Inheritance: وراثة السلوك. Polymorphism: نفس الاسم بسلوك مختلف (overloading وoverriding). Abstraction: إظهار الأساسي وإخفاء التفاصيل."
+"Encapsulation: إخفاء البيانات وراء methods. Inheritance: وراثة السلوك. Polymorphism: نفس الاسم بسلوك مختلف (overloading و overriding). Abstraction: إظهار الأساسي وإخفاء التفاصيل."
 ]
 ]
 },
@@ -326,7 +326,7 @@ window.FIELDS=[
 [
 "e",
 "إيه الفرق بين Stack و Queue؟",
-"الـ Stack آخر داخل أول خارج (LIFO) زي طبق فوق طبق: عمليات push وpop. الـ Queue أول داخل أول خارج (FIFO) زي طابور: enqueue وdequeue. الـ Stack بيتستخدم في الـ undo والـ recursion، والـ Queue في الـ BFS وجدولة المهام."
+"الـ Stack آخر داخل أول خارج (LIFO) زي طبق فوق طبق: عمليات push و pop. الـ Queue أول داخل أول خارج (FIFO) زي طابور: enqueue و dequeue. الـ Stack بيتستخدم في الـ undo والـ recursion، والـ Queue في الـ BFS وجدولة المهام."
 ],
 [
 "m",
@@ -370,7 +370,7 @@ window.FIELDS=[
 "brief": "برنامج بيدير كتب وأعضاء وإعارة باستخدام الكلاسات والـ OOP وبيحفظ البيانات في ملفات.",
 "data": "مفيش بيانات خارجية. ابدأ بكتب وأعضاء تجريبيين.",
 "steps": [
-"صمّم الكلاسات: Book وMember وLoan وLibrary.",
+"صمّم الكلاسات: Book و Member و Loan و Library.",
 "اكتب العمليات: إضافة، بحث، إعارة، إرجاع، غرامة تأخير.",
 "اعمل معالجة للأخطاء (كتاب مش موجود، مستعار).",
 "احفظ واقرا البيانات من ملف CSV أو JSON.",
@@ -392,7 +392,7 @@ window.FIELDS=[
 "Data Structures"
 ],
 "time": "12-15 ساعة",
-"brief": "نفّذ Stack وQueue وLinked List وBinary Search Tree وHash Map بنفسك مع اختبارات.",
+"brief": "نفّذ Stack و Queue و Linked List و Binary Search Tree و Hash Map بنفسك مع اختبارات.",
 "data": "مفيش بيانات. ولّد مدخلات عشوائية للاختبار.",
 "steps": [
 "اكتب كل هيكل كـ class generic (templates أو generics).",
@@ -457,7 +457,7 @@ window.FIELDS=[
 [
 "m",
 "إيه الفرق بين Future و Stream؟",
-"`Future` بيرجّع قيمة واحدة في المستقبل (نتيجة طلب API). `Stream` بيرجّع سلسلة قيم على مدار الوقت (تحديثات Firebase، أحداث). بنستخدم `async/await` مع Future و`await for` أو `listen` مع Stream.\n```dart\nFuture<String> load() async {\n  await Future.delayed(const Duration(seconds: 1));\n  return 'تم';\n}\n```"
+"`Future` بيرجّع قيمة واحدة في المستقبل (نتيجة طلب API). `Stream` بيرجّع سلسلة قيم على مدار الوقت (تحديثات Firebase، أحداث). بنستخدم `async/await` مع Future و `await for` أو `listen` مع Stream.\n```dart\nFuture<String> load() async {\n  await Future.delayed(const Duration(seconds: 1));\n  return 'تم';\n}\n```"
 ],
 [
 "m",
@@ -467,7 +467,7 @@ window.FIELDS=[
 [
 "m",
 "إيه الفرق بين List و Set و Map؟",
-"`List` مرتبة وبتسمح بالتكرار. `Set` من غير تكرار. `Map` أزواج مفتاح وقيمة. والـ collection-if وspread مفيدين في بناء الـ widgets."
+"`List` مرتبة وبتسمح بالتكرار. `Set` من غير تكرار. `Map` أزواج مفتاح وقيمة. والـ collection-if و spread مفيدين في بناء الـ widgets."
 ],
 [
 "m",
@@ -494,7 +494,7 @@ window.FIELDS=[
 [
 "e",
 "اشرح Row و Column و Expanded.",
-"`Row` بيرتب الأبناء أفقياً و`Column` رأسياً. `Expanded` جوه Row/Column بياخد المساحة المتبقية. الـ `mainAxisAlignment` للمحور الرئيسي و`crossAxisAlignment` للمحور العكسي.\n```dart\nRow(children: [\n  const Icon(Icons.star),\n  Expanded(child: Text('نص طويل ياخد المتاح')),\n])\n```"
+"`Row` بيرتب الأبناء أفقياً و `Column` رأسياً. `Expanded` جوه Row/Column بياخد المساحة المتبقية. الـ `mainAxisAlignment` للمحور الرئيسي و `crossAxisAlignment` للمحور العكسي.\n```dart\nRow(children: [\n  const Icon(Icons.star),\n  Expanded(child: Text('نص طويل ياخد المتاح')),\n])\n```"
 ],
 [
 "m",
@@ -504,7 +504,7 @@ window.FIELDS=[
 [
 "m",
 "إيه هو الـ BuildContext؟",
-"مرجع لمكان الـ widget في شجرة الـ widgets. بنستخدمه عشان نوصل للـ Theme أو الـ Navigator أو الـ Provider الموجودين فوقه: `Theme.of(context)` و`Navigator.of(context)`. لازم context تكون تحت الـ widget اللي بتدور عليه."
+"مرجع لمكان الـ widget في شجرة الـ widgets. بنستخدمه عشان نوصل للـ Theme أو الـ Navigator أو الـ Provider الموجودين فوقه: `Theme.of(context)` و `Navigator.of(context)`. لازم context تكون تحت الـ widget اللي بتدور عليه."
 ],
 [
 "m",
@@ -541,17 +541,17 @@ window.FIELDS=[
 [
 "m",
 "إيه دورة حياة التطبيق (App Lifecycle)؟",
-"حالات زي resumed (شغال قدامك) وinactive وpaused (في الخلفية) وdetached. في Flutter بتتابعها بـ `WidgetsBindingObserver`. بنحفظ البيانات عند paused ونوقف المهام اللي مش لازم تفضل شغالة."
+"حالات زي resumed (شغال قدامك) و inactive و paused (في الخلفية) و detached. في Flutter بتتابعها بـ `WidgetsBindingObserver`. بنحفظ البيانات عند paused ونوقف المهام اللي مش لازم تفضل شغالة."
 ],
 [
 "m",
 "إيه الـ Permissions وإزاي تتعامل معاها؟",
-"الأذونات زي الكاميرا والموقع بتتطلب إعلان في ملف النظام (AndroidManifest وInfo.plist) وطلب وقت التشغيل (مثلاً حزمة `permission_handler`). اشرح للمستخدم ليه محتاجها، واشتغل بشكل سليم لو رفض."
+"الأذونات زي الكاميرا والموقع بتتطلب إعلان في ملف النظام (AndroidManifest و Info.plist) وطلب وقت التشغيل (مثلاً حزمة `permission_handler`). اشرح للمستخدم ليه محتاجها، واشتغل بشكل سليم لو رفض."
 ],
 [
 "m",
 "إزاي تحافظ على أداء التطبيق؟",
-"استخدم `const` widgets، و`ListView.builder`، وقسّم الـ build لـ widgets صغيرة، وتجنب العمل التقيل في `build`، واستخدم `compute` للشغل التقيل، وصغّر الصور، وراقب بـ Flutter DevTools."
+"استخدم `const` widgets، و `ListView.builder`، وقسّم الـ build لـ widgets صغيرة، وتجنب العمل التقيل في `build`، واستخدم `compute` للشغل التقيل، وصغّر الصور، وراقب بـ Flutter DevTools."
 ],
 [
 "e",
@@ -601,10 +601,10 @@ window.FIELDS=[
 "brief": "تعرض قايمة من API مع صفحة تفاصيل وبحث وحالات تحميل وخطأ.",
 "data": "API مجاني مفتوح زي JSONPlaceholder أو أي واجهة أخبار مجانية. اقرا شروطها.",
 "steps": [
-"اعمل model وservice للـ API.",
+"اعمل model و service للـ API.",
 "استخدم Provider لإدارة الحالة.",
 "اعرض القايمة والتفاصيل مع Navigator.",
-"أضف بحث وPull-to-refresh.",
+"أضف بحث و Pull-to-refresh.",
 "عالج الأخطاء وغياب الإنترنت برسالة واضحة."
 ],
 "deliver": [
@@ -702,7 +702,7 @@ window.FIELDS=[
 [
 "e",
 "إيه هو XSS وأنواعه؟",
-"Cross-Site Scripting: حقن سكريبت في صفحة بيشوفها مستخدمين تانيين. الأنواع: Stored (متخزن في السيرفر)، Reflected (راجع من الطلب)، DOM-based (في كود المتصفح). الحماية: Output encoding حسب السياق، وCSP، و`HttpOnly` للكوكيز، وتجنب `innerHTML` بمدخلات خام."
+"Cross-Site Scripting: حقن سكريبت في صفحة بيشوفها مستخدمين تانيين. الأنواع: Stored (متخزن في السيرفر)، Reflected (راجع من الطلب)، DOM-based (في كود المتصفح). الحماية: Output encoding حسب السياق، و CSP، و `HttpOnly` للكوكيز، وتجنب `innerHTML` بمدخلات خام."
 ],
 [
 "m",
@@ -712,7 +712,7 @@ window.FIELDS=[
 [
 "m",
 "إيه هو OWASP Top 10؟",
-"قايمة من منظمة OWASP لأخطر مخاطر أمن تطبيقات الويب، بتتحدث كل كام سنة. بتشمل مثلاً: Broken Access Control وInjection وCryptographic Failures وSecurity Misconfiguration. بنستخدمها كمرجع للتدريب والمراجعة. راجع النسخة الحالية على موقع owasp.org."
+"قايمة من منظمة OWASP لأخطر مخاطر أمن تطبيقات الويب، بتتحدث كل كام سنة. بتشمل مثلاً: Broken Access Control و Injection و Cryptographic Failures و Security Misconfiguration. بنستخدمها كمرجع للتدريب والمراجعة. راجع النسخة الحالية على موقع owasp.org."
 ],
 [
 "m",
@@ -790,7 +790,7 @@ window.FIELDS=[
 "steps": [
 "نصّب الـ VM وعزل الشبكة (Host-only).",
 "شغّل DVWA أو Juice Shop.",
-"جرّب SQL Injection وXSS على مستوى سهل.",
+"جرّب SQL Injection و XSS على مستوى سهل.",
 "اكتب لكل ثغرة: الوصف، الخطوات، الخطورة، الحل.",
 "كرر على مستوى أعلى وراجع الفرق في الحماية."
 ],
@@ -943,7 +943,7 @@ window.FIELDS=[
 [
 "e",
 "إيه الفرق بين SUMIF و SUMIFS؟",
-"`SUMIF` بشرط واحد، و`SUMIFS` بأكتر من شرط (ومجال الجمع بييجي الأول).\n```\n=SUMIFS(D:D, B:B, \"مبيعات\", C:C, \">=2026-01-01\")\n```"
+"`SUMIF` بشرط واحد، و `SUMIFS` بأكتر من شرط (ومجال الجمع بييجي الأول).\n```\n=SUMIFS(D:D, B:B, \"مبيعات\", C:C, \">=2026-01-01\")\n```"
 ],
 [
 "e",
@@ -1139,12 +1139,12 @@ window.FIELDS=[
 [
 "e",
 "إيه هو Google Analytics 4 وإيه أهم مقاييسه؟",
-"أداة تحليلات مجانية مبنية على الأحداث (events). أهم المقاييس: Users وSessions وEngagement rate ومدة التفاعل والتحويلات (Key events) ومصادر الزيارات. شاهد كمان أي صفحات بتجيب تحويلات مش بس زيارات."
+"أداة تحليلات مجانية مبنية على الأحداث (events). أهم المقاييس: Users و Sessions و Engagement rate ومدة التفاعل والتحويلات (Key events) ومصادر الزيارات. شاهد كمان أي صفحات بتجيب تحويلات مش بس زيارات."
 ],
 [
 "e",
 "إيه هي الـ UTM parameters؟",
-"إضافات على الرابط بتخلي التحليلات تعرف مصدر الزيارة بدقة: `utm_source` و`utm_medium` و`utm_campaign`.\n```\nhttps://example.com/?utm_source=facebook&utm_medium=paid&utm_campaign=ramadan\n```"
+"إضافات على الرابط بتخلي التحليلات تعرف مصدر الزيارة بدقة: `utm_source` و `utm_medium` و `utm_campaign`.\n```\nhttps://example.com/?utm_source=facebook&utm_medium=paid&utm_campaign=ramadan\n```"
 ],
 [
 "m",
@@ -1236,7 +1236,7 @@ window.FIELDS=[
 "حدد هدف واحد قابل للقياس.",
 "اعمل إعلانين مختلفين (A/B).",
 "حط UTM على الروابط.",
-"راقب CTR وCPC وCPA لعدة أيام.",
+"راقب CTR و CPC و CPA لعدة أيام.",
 "اكتب تقرير: إيه نجح وإيه فشل وليه وإيه التوصية."
 ],
 "deliver": [
@@ -1260,7 +1260,7 @@ window.FIELDS=[
 [
 "e",
 "احكيلي عن نفسك.",
-"هيكل 60 ثانية: مين أنت (دراستك)، أهم مهارتين بدليل (مشروع أو تدريب)، وليه الوظيفة دي. مثال: \"أنا طالب في سنة تالتة بدرس إدارة أعمال، اتعلمت Excel وSQL وعملت مشروع تحليل مبيعات بقيت فيه سريع في تلخيص النتايج. مهتم بالوظيفة دي لأنها بتجمع التحليل مع شغل الفريق.\" متحكيش حياتك كلها."
+"هيكل 60 ثانية: مين أنت (دراستك)، أهم مهارتين بدليل (مشروع أو تدريب)، وليه الوظيفة دي. مثال: \"أنا طالب في سنة تالتة بدرس إدارة أعمال، اتعلمت Excel و SQL وعملت مشروع تحليل مبيعات بقيت فيه سريع في تلخيص النتايج. مهتم بالوظيفة دي لأنها بتجمع التحليل مع شغل الفريق.\" متحكيش حياتك كلها."
 ],
 [
 "e",
@@ -1372,7 +1372,7 @@ window.FIELDS=[
 "projects": [
 {
 "id": "pj1",
-"title": "CV وLinkedIn وبورتفوليو صفحة واحدة",
+"title": "CV و LinkedIn وبورتفوليو صفحة واحدة",
 "level": "مبتدئ",
 "tools": [
 "Canva أو Word",
@@ -1385,7 +1385,7 @@ window.FIELDS=[
 "steps": [
 "اجمع إنجازاتك واكتبها بأفعال وأرقام.",
 "اعمل CV على صفحة بقالب بسيط.",
-"حسّن LinkedIn: صورة وHeadline وAbout.",
+"حسّن LinkedIn: صورة و Headline و About.",
 "اعمل صفحة مشاريع بروابط.",
 "خلّي صديق أو دكتور يراجعهم."
 ],

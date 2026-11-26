@@ -12,7 +12,7 @@
 <meta property="og:locale" content="ar_EG">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Noto+Sans+Arabic:wght@600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 [hidden]{display:none!important}
@@ -94,7 +94,7 @@ h2.sec{font-size:1.5rem;font-weight:900;margin:48px 0 6px}
 .gc h3{font-size:1rem;margin-bottom:6px}.gc p{color:var(--muted);font-size:.93rem}
 footer{text-align:center;color:var(--muted);padding:30px 16px;border-top:1px solid var(--border);font-size:.9rem}
 @media(max-width:600px){main{padding:20px 14px 70px}.qh{padding:12px}.topbar-inner{padding:10px 14px}}
-</style>
+.w{font-family:'Noto Sans Arabic','Segoe UI',Tahoma,sans-serif;font-weight:600}</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -159,5 +159,10 @@ document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const l=c.dataset.l
 render();projs();
 </script>
 <script src="mock.js"></script>
+<script>/* standalone waw: Cairo draws it like a Latin g next to Latin words, so use another font for it */
+(function(){var RE=/(^|\s)\u0648(?=\s|$)/;function fix(n){if(n.nodeType===3){if(!RE.test(n.nodeValue))return;var p=n.parentNode;if(!p||p.nodeName==='SCRIPT'||p.nodeName==='STYLE'||p.nodeName==='CODE'||p.nodeName==='PRE'||p.nodeName==='TEXTAREA')return;var f=document.createDocumentFragment(),parts=n.nodeValue.split(/(^|\s)\u0648(?=\s|$)/);
+var s=n.nodeValue,re=/(^|\s)\u0648(?=\s|$)/g,last=0,m;while((m=re.exec(s))){var at=m.index+m[1].length;f.appendChild(document.createTextNode(s.slice(last,at)));var sp=document.createElement('span');sp.className='w';sp.textContent='\u0648';f.appendChild(sp);last=at+1}f.appendChild(document.createTextNode(s.slice(last)));p.replaceChild(f,n)}else if(n.nodeType===1&&n.className!=='w'){var c=n.firstChild;while(c){var nx=c.nextSibling;fix(c);c=nx}}}
+var busy=false;function run(){if(busy)return;busy=true;fix(document.body);busy=false}
+new MutationObserver(function(ms){if(busy)return;busy=true;ms.forEach(function(m){m.addedNodes.forEach(fix)});busy=false}).observe(document.body,{childList:true,subtree:true});run()})();</script>
 </body>
 </html>
