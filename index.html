@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interview Prep | جهّز لمقابلة شغل داتا</title>
-<meta name="description" content="أسئلة مقابلات SQL و Excel و Python و Power BI بإجابات بالعربي، ومشاريع بورتفوليو جاهزة. أكاديمية السادات للعلوم الإدارية فرع أسيوط.">
+<title>Interview Prep | جهّز لمقابلة شغل في مجالك</title>
+<meta name="description" content="أسئلة مقابلات بإجابات بالعربي في الداتا والويب والبرمجة وتطبيقات الموبايل والأمن السيبراني والمحاسبة والتسويق الرقمي، ومشاريع بورتفوليو جاهزة لكل مجال. أكاديمية السادات للعلوم الإدارية فرع أسيوط.">
 <meta name="theme-color" content="#06070a">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2306070a'/%3E%3Ctext x='50' y='50' dy='.35em' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='40' fill='%235eead4'%3EIP%3C/text%3E%3C/svg%3E">
 <meta property="og:title" content="Interview Prep | SAMS Academy">
-<meta property="og:description" content="أسئلة مقابلات داتا ومشاريع بورتفوليو جاهزة بالعربي.">
+<meta property="og:description" content="أسئلة مقابلات ومشاريع بورتفوليو جاهزة لـ 8 مجالات بالعربي.">
 <meta property="og:locale" content="ar_EG">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,8 @@ main{max-width:1000px;margin:0 auto;padding:28px 20px 80px}
 .hero p{color:var(--muted);margin-top:10px;max-width:640px}
 .stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .stat{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:8px 16px;font-size:.9rem}.stat b{color:var(--accent2)}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 14px}
+.fields{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin-top:22px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}.field{flex:0 0 auto;font:inherit;cursor:pointer;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-weight:700;white-space:nowrap}.field[aria-pressed=true]{background:linear-gradient(110deg,#5eead4,#7aa7ff);border-color:transparent;color:#06070a}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}
 .tab{font:inherit;cursor:pointer;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:12px;padding:8px 16px;font-weight:600}
 .tab[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}
 .tab small{opacity:.7;margin-inline-start:6px}
@@ -86,10 +87,11 @@ footer{text-align:center;color:var(--muted);padding:30px 16px;border-top:1px sol
 </div></header>
 <main>
 <section class="hero">
-<h1>جهّز لمقابلة شغل <span>الداتا</span></h1>
-<p>أسئلة بإجابات واضحة بالعربي في SQL و Excel و Python و Power BI، مقسّمة سهل ومتوسط وصعب. وتحت مشاريع بورتفوليو جاهزة بالخطوات، تبني منها ملفك قبل المقابلة.</p>
-<div class="stats"><div class="stat"><b id="sq">0</b> سؤال</div><div class="stat"><b>4</b> أدوات</div><div class="stat"><b id="sp">0</b> مشاريع بورتفوليو</div></div>
+<h1>جهّز لمقابلة شغل <span>في مجالك</span></h1>
+<p>اختار مجالك: داتا، ويب، برمجة، موبايل، أمن سيبراني، محاسبة، تسويق رقمي، أو جاهزية سوق الشغل. أسئلة بإجابات واضحة بالعربي مقسّمة سهل ومتوسط وصعب، وتحتها مشاريع بورتفوليو جاهزة بالخطوات.</p>
+<div class="stats"><div class="stat"><b id="sq">0</b> سؤال</div><div class="stat"><b id="sf">0</b> مجالات</div><div class="stat"><b id="sp">0</b> مشاريع بورتفوليو</div></div>
 </section>
+<div class="fields" id="fields" aria-label="المجال"></div>
 <div class="tabs" role="tablist" id="tabs"></div>
 <div class="tools"><input id="s" type="search" placeholder="ابحث في الأسئلة..." aria-label="بحث">
 <button class="chip" data-l="e" aria-pressed="false">سهل</button><button class="chip" data-l="m" aria-pressed="false">متوسط</button><button class="chip" data-l="h" aria-pressed="false">صعب</button></div>
@@ -102,19 +104,24 @@ footer{text-align:center;color:var(--muted);padding:30px 16px;border-top:1px sol
 </main>
 <footer>أكاديمية السادات للعلوم الإدارية فرع أسيوط<br><a href="https://capwv.github.io/SAMS-Hub/">Platforms &amp; Tools</a></footer>
 <script src="data.js"></script>
+<script src="data2.js"></script>
 <script>
-const T=window.TOPICS,P=window.PROJECTS,G=window.GUIDE;
+const G=window.GUIDE;
+const FS=[{id:"data",name:"الداتا",icon:"📊",topics:window.TOPICS,projects:window.PROJECTS}].concat(window.FIELDS||[]);
+let fid=FS[0].id,T=FS[0].topics,P=FS[0].projects;
 const LS='sams-ip-v1';let st={};try{st=JSON.parse(localStorage.getItem(LS)||'{}')}catch(e){}
 st.r=st.r||{};st.p=st.p||{};
 const save=()=>{try{localStorage.setItem(LS,JSON.stringify(st))}catch(e){}};
 let cur=T[0].id,lvl=null,q='';
+function setField(id,keep){const f=FS.find(x=>x.id===id)||FS[0];fid=f.id;T=f.topics;P=f.projects;cur=T[0].id;if(!keep){st.f=fid;save();try{history.replaceState(null,'','#'+fid)}catch(e){}}}
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const L={e:'سهل',m:'متوسط',h:'صعب'};
 function fmt(t){return t.split(/```(?:\w+)?\n/).map((p,i)=>{if(i%2){return '<pre><code>'+esc(p.replace(/\n?```\s*$/,'').replace(/\n$/,''))+'</code></pre>'}
 return p.split('\n').filter(Boolean).map(x=>'<p>'+esc(x).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/`([^`]+)`/g,'<code class="i">$1</code>')+'</p>').join('')}).join('')}
-const total=T.reduce((a,t)=>a+t.q.length,0);
-document.getElementById('pt').textContent=total;document.getElementById('sq').textContent=total;document.getElementById('sp').textContent=P.length;
+const total=FS.reduce((a,f)=>a+f.topics.reduce((b,t)=>b+t.q.length,0),0);
+document.getElementById('pt').textContent=total;document.getElementById('sq').textContent=total;document.getElementById('sp').textContent=FS.reduce((a,f)=>a+f.projects.length,0);document.getElementById('sf').textContent=FS.length;
 function prog(){const n=Object.keys(st.r).filter(k=>st.r[k]).length;document.getElementById('pc').textContent=n;document.getElementById('pf').style.width=(n/total*100)+'%'}
+function fields(){const el=document.getElementById('fields');el.innerHTML='';FS.forEach(f=>{const b=document.createElement('button');b.className='field';b.setAttribute('aria-pressed',f.id===fid);b.textContent=f.icon+' '+f.name;b.onclick=()=>{setField(f.id);render();projs()};el.appendChild(b)})}
 function tabs(){const el=document.getElementById('tabs');el.innerHTML='';T.forEach(t=>{const b=document.createElement('button');b.className='tab';b.setAttribute('role','tab');b.setAttribute('aria-selected',t.id===cur);
 const n=t.q.filter((_,i)=>st.r[t.id+i]).length;b.innerHTML=t.icon+' '+t.name+'<small>'+n+'/'+t.q.length+'</small>';b.onclick=()=>{cur=t.id;render()};el.appendChild(b)})}
 function list(){const t=T.find(x=>x.id===cur),el=document.getElementById('list');el.innerHTML='';let c=0;
@@ -127,9 +134,10 @@ if(!c)el.innerHTML='<div class="empty">مفيش نتايج. جرب كلمة تا
 function projs(){document.getElementById('proj').innerHTML=P.map(p=>'<article class="proj"><h3>'+esc(p.title)+'</h3><div class="meta"><span class="tag">'+p.level+'</span><span class="tag">⏱ '+p.time+'</span>'+p.tools.map(x=>'<span class="tag">'+esc(x)+'</span>').join('')+'</div><p>'+esc(p.brief)+'</p><h4>البيانات</h4><p>'+esc(p.data)+'</p><h4>الخطوات</h4><ul class="chk">'+p.steps.map((s,i)=>'<li><label><input type="checkbox" data-k="'+p.id+'-'+i+'"'+(st.p[p.id+'-'+i]?' checked':'')+'><span>'+esc(s)+'</span></label></li>').join('')+'</ul><h4>اللي هتسلّمه</h4><ul>'+p.deliver.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul><div class="tipbox">💡 '+esc(p.tip)+'</div></article>').join('');
 document.querySelectorAll('#proj input').forEach(i=>i.onchange=()=>{st.p[i.dataset.k]=i.checked;save()})}
 document.getElementById('guide').innerHTML=G.map(g=>'<div class="gc"><h3>'+esc(g[0])+'</h3><p>'+esc(g[1])+'</p></div>').join('');
-function render(){tabs();list();prog()}
+function render(){fields();tabs();list();prog()}
 document.getElementById('s').oninput=e=>{q=e.target.value.trim().toLowerCase();list()};
 document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const l=c.dataset.l;lvl=lvl===l?null:l;document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x.dataset.l===lvl));list()});
+{const h=(location.hash||'').slice(1),sv=FS.some(x=>x.id===h)?h:(FS.some(x=>x.id===st.f)?st.f:null);if(sv)setField(sv,true)}
 render();projs();
 </script>
 </body>
