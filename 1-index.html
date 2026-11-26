@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interview Prep | جهّز لمقابلة شغل في مجالك</title>
+<meta name="description" content="أسئلة مقابلات بإجابات بالعربي في الداتا والويب والبرمجة وتطبيقات الموبايل والأمن السيبراني والمحاسبة والتسويق الرقمي، ومشاريع بورتفوليو جاهزة لكل مجال. أكاديمية السادات للعلوم الإدارية فرع أسيوط.">
+<meta name="theme-color" content="#06070a">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2306070a'/%3E%3Ctext x='50' y='50' dy='.35em' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='40' fill='%235eead4'%3EIP%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Interview Prep | SAMS Academy">
+<meta property="og:description" content="أسئلة مقابلات ومشاريع بورتفوليو جاهزة لـ 8 مجالات بالعربي.">
+<meta property="og:locale" content="ar_EG">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+:root{--bg:#06070a;--panel:#0a0c12;--panel2:#101522;--border:rgba(255,255,255,.10);--text:#f5f7fa;--muted:#98a1b3;--accent:#3b82f6;--accent2:#7aa7ff;--green:#2ecc71;--amber:#ffc048;--red:#ff6b6b;--code-bg:#070a11}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);line-height:1.9;overflow-x:hidden}
+code,pre{font-family:'JetBrains Mono',monospace;direction:ltr;text-align:left;font-variant-ligatures:none}
+a{color:var(--accent2)}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(6,7,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.topbar-inner{max-width:1000px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:1.25rem;font-weight:900}.logo span{color:var(--accent2)}
+.pw{flex:1;min-width:160px;max-width:380px;margin-inline-start:auto}
+.pl{font-size:.8rem;color:var(--muted);margin-bottom:4px}.pl b{color:var(--accent2)}
+.bar{height:8px;background:var(--panel2);border-radius:99px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px;transition:width .5s}
+main{max-width:1000px;margin:0 auto;padding:28px 20px 80px}
+.hero{padding:20px 0 8px}
+.hero h1{font-size:clamp(1.7rem,5vw,2.6rem);font-weight:900;line-height:1.35}
+.hero h1 span{background:linear-gradient(110deg,#5eead4,#7aa7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);margin-top:10px;max-width:640px}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.stat{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:8px 16px;font-size:.9rem}.stat b{color:var(--accent2)}
+.fields{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin-top:22px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}.field{flex:0 0 auto;font:inherit;cursor:pointer;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-weight:700;white-space:nowrap}.field[aria-pressed=true]{background:linear-gradient(110deg,#5eead4,#7aa7ff);border-color:transparent;color:#06070a}
+.modes{display:flex;gap:8px;margin:6px 0 4px}.mode{flex:1;font:inherit;cursor:pointer;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:12px;padding:10px 14px;font-weight:700}.mode[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.mcard{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:14px}
+.mh{font-size:1.2rem;font-weight:900;margin-bottom:6px}.mh4{font-size:.95rem;margin:14px 0 8px;color:var(--accent2)}
+.mrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:12px 0}.mrow>span{min-width:110px;color:var(--muted)}.mchips{display:flex;gap:8px;flex-wrap:wrap}
+.mstart{width:100%;padding:12px;font-size:1rem;font-weight:700;margin-top:8px;background:linear-gradient(110deg,#5eead4,#7aa7ff);color:#06070a;border:0}
+.mresume{background:rgba(255,192,72,.08);border:1px solid rgba(255,192,72,.4);border-radius:12px;padding:10px 14px;margin:10px 0}
+.mhist{display:grid;gap:6px;margin:10px 0}.mh1{display:flex;justify-content:space-between;background:var(--panel2);border-radius:9px;padding:6px 12px;font-size:.9rem}
+.mbar{margin:8px 0}.mbl{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:3px}.fill.g{background:var(--green)}.fill.a{background:var(--amber)}.fill.r{background:var(--red)}
+.mtop{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}.mtimer{margin-inline-start:auto;font-family:'JetBrains Mono',monospace;font-size:1.2rem;font-weight:700;color:var(--accent2)}.mtimer.low{color:var(--red)}
+.mprog{height:5px;margin-bottom:14px}.mq{font-size:1.15rem;line-height:1.7;margin-bottom:12px}
+#mock textarea{width:100%;font:inherit;background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;resize:vertical}
+.mmodel,.mmine{background:var(--panel2);border-radius:12px;padding:10px 14px;margin-bottom:10px;color:#dbe2ef}.mmodel>b,.mmine>b{color:var(--accent2)}.mto{color:var(--red);font-weight:700}
+.mrate{display:flex;gap:8px;flex-wrap:wrap}.mrate .btn{flex:1;min-width:120px;padding:9px 12px}.r1:hover{border-color:var(--green)}.r2:hover{border-color:var(--amber)}.r3:hover{border-color:var(--red)}
+.mscore{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}.mscore b{font-size:3rem;font-weight:900;background:linear-gradient(110deg,#5eead4,#7aa7ff);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2}.mscore span{color:var(--muted)}
+.mwrap{flex-wrap:wrap;margin-top:14px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}
+.tab{font:inherit;cursor:pointer;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:12px;padding:8px 16px;font-weight:600}
+.tab[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab small{opacity:.7;margin-inline-start:6px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
+.tools input{flex:1;min-width:200px;font:inherit;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:9px 14px}
+.chip{font:inherit;font-size:.85rem;cursor:pointer;background:transparent;color:var(--muted);border:1px solid var(--border);border-radius:99px;padding:4px 14px}
+.chip[aria-pressed=true]{color:var(--text);border-color:var(--accent2);background:var(--panel2)}
+.item{background:var(--panel);border:1px solid var(--border);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.item.done{border-color:rgba(46,204,113,.45)}
+.qh{width:100%;font:inherit;text-align:start;display:flex;gap:12px;align-items:center;background:none;border:0;color:var(--text);padding:14px 16px;cursor:pointer;font-weight:700}
+.qh .t{flex:1}
+.lv{font-size:.72rem;font-weight:700;border-radius:99px;padding:1px 10px;white-space:nowrap}
+.lv.e{background:rgba(46,204,113,.15);color:var(--green)}.lv.m{background:rgba(255,192,72,.15);color:var(--amber)}.lv.h{background:rgba(255,107,107,.15);color:var(--red)}
+.chev{transition:transform .2s;color:var(--muted)}
+.item.open .chev{transform:rotate(180deg)}
+.ans{display:none;padding:0 16px 16px;color:#dbe2ef}
+.item.open .ans{display:block}
+.ans p{margin-bottom:8px}
+.ans code.i{background:var(--code-bg);border:1px solid var(--border);border-radius:6px;padding:0 6px;font-size:.88em}
+pre{background:var(--code-bg);border:1px solid var(--border);border-radius:10px;padding:12px 14px;overflow-x:auto;font-size:.85rem;line-height:1.6;margin:8px 0;max-width:100%}
+.act{display:flex;gap:8px;margin-top:10px}
+.btn{font:inherit;font-size:.85rem;cursor:pointer;background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:9px;padding:4px 14px}
+.btn.on{background:rgba(46,204,113,.15);border-color:var(--green);color:var(--green)}
+.empty{color:var(--muted);text-align:center;padding:30px}
+h2.sec{font-size:1.5rem;font-weight:900;margin:48px 0 6px}
+.sub{color:var(--muted);margin-bottom:16px}
+.proj{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:14px}
+.proj h3{font-size:1.15rem;margin-bottom:6px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.tag{font-size:.78rem;background:var(--panel2);border:1px solid var(--border);border-radius:99px;padding:1px 12px;color:var(--accent2)}
+.proj h4{font-size:.95rem;margin:12px 0 4px;color:var(--accent2)}
+.proj ul,.proj ol{padding-inline-start:22px}
+.proj li{margin-bottom:3px}
+.chk{list-style:none;padding:0!important}
+.chk label{display:flex;gap:8px;cursor:pointer;align-items:flex-start}
+.chk input{margin-top:9px;accent-color:var(--green)}
+.tipbox{margin-top:12px;border-inline-start:3px solid var(--amber);background:rgba(255,192,72,.07);padding:8px 14px;border-radius:8px;font-size:.92rem}
+.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.gc{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px}
+.gc h3{font-size:1rem;margin-bottom:6px}.gc p{color:var(--muted);font-size:.93rem}
+footer{text-align:center;color:var(--muted);padding:30px 16px;border-top:1px solid var(--border);font-size:.9rem}
+@media(max-width:600px){main{padding:20px 14px 70px}.qh{padding:12px}.topbar-inner{padding:10px 14px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+<div class="logo">Interview<span> Prep</span></div>
+<div class="pw"><div class="pl">راجعت <b id="pc">0</b> من <b id="pt">0</b> سؤال</div><div class="bar"><div class="fill" id="pf"></div></div></div>
+</div></header>
+<main>
+<section class="hero">
+<h1>جهّز لمقابلة شغل <span>في مجالك</span></h1>
+<p>اختار مجالك: داتا، ويب، برمجة، موبايل، أمن سيبراني، محاسبة، تسويق رقمي، أو جاهزية سوق الشغل. أسئلة بإجابات واضحة بالعربي مقسّمة سهل ومتوسط وصعب، وتحتها مشاريع بورتفوليو جاهزة بالخطوات.</p>
+<div class="stats"><div class="stat"><b id="sq">0</b> سؤال</div><div class="stat"><b id="sf">0</b> مجالات</div><div class="stat"><b id="sp">0</b> مشاريع بورتفوليو</div></div>
+</section>
+<div class="fields" id="fields" aria-label="المجال"></div>
+<div class="modes" id="modes"><button class="mode" data-m="study" aria-pressed="true">📚 مذاكرة</button><button class="mode" data-m="mock" aria-pressed="false">🎯 محاكاة مقابلة</button></div>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="tools"><input id="s" type="search" placeholder="ابحث في الأسئلة..." aria-label="بحث">
+<button class="chip" data-l="e" aria-pressed="false">سهل</button><button class="chip" data-l="m" aria-pressed="false">متوسط</button><button class="chip" data-l="h" aria-pressed="false">صعب</button></div>
+<div id="list"></div>
+<div id="mock" hidden></div>
+<h2 class="sec" id="projects">مشاريع بورتفوليو جاهزة</h2>
+<p class="sub">اختار مشروع، نفّذ الخطوات، ارفعه على GitHub، واكتب README. علّم على الخطوات اللي خلصتها.</p>
+<div id="proj"></div>
+<h2 class="sec">نصايح للمقابلة نفسها</h2>
+<div class="guide" id="guide"></div>
+</main>
+<footer>أكاديمية السادات للعلوم الإدارية فرع أسيوط<br><a href="https://capwv.github.io/SAMS-Hub/">Platforms &amp; Tools</a></footer>
+<script src="data.js"></script>
+<script src="data2.js"></script>
+<script>
+const G=window.GUIDE;
+const FS=[{id:"data",name:"الداتا",icon:"📊",topics:window.TOPICS,projects:window.PROJECTS}].concat(window.FIELDS||[]);
+let fid=FS[0].id,T=FS[0].topics,P=FS[0].projects;
+const LS='sams-ip-v1';let st={};try{st=JSON.parse(localStorage.getItem(LS)||'{}')}catch(e){}
+st.r=st.r||{};st.p=st.p||{};
+const save=()=>{try{localStorage.setItem(LS,JSON.stringify(st))}catch(e){}};
+let cur=T[0].id,lvl=null,q='';
+function setField(id,keep){const f=FS.find(x=>x.id===id)||FS[0];fid=f.id;T=f.topics;P=f.projects;cur=T[0].id;if(!keep){st.f=fid;save();try{history.replaceState(null,'','#'+fid)}catch(e){}}}
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const L={e:'سهل',m:'متوسط',h:'صعب'};
+function fmt(t){return t.split(/```(?:\w+)?\n/).map((p,i)=>{if(i%2){return '<pre><code>'+esc(p.replace(/\n?```\s*$/,'').replace(/\n$/,''))+'</code></pre>'}
+return p.split('\n').filter(Boolean).map(x=>'<p>'+esc(x).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/`([^`]+)`/g,'<code class="i">$1</code>')+'</p>').join('')}).join('')}
+const total=FS.reduce((a,f)=>a+f.topics.reduce((b,t)=>b+t.q.length,0),0);
+document.getElementById('pt').textContent=total;document.getElementById('sq').textContent=total;document.getElementById('sp').textContent=FS.reduce((a,f)=>a+f.projects.length,0);document.getElementById('sf').textContent=FS.length;
+function prog(){const n=Object.keys(st.r).filter(k=>st.r[k]).length;document.getElementById('pc').textContent=n;document.getElementById('pf').style.width=(n/total*100)+'%'}
+function fields(){const el=document.getElementById('fields');el.innerHTML='';FS.forEach(f=>{const b=document.createElement('button');b.className='field';b.setAttribute('aria-pressed',f.id===fid);b.textContent=f.icon+' '+f.name;b.onclick=()=>{setField(f.id);render();projs()};el.appendChild(b)})}
+function tabs(){const el=document.getElementById('tabs');el.innerHTML='';T.forEach(t=>{const b=document.createElement('button');b.className='tab';b.setAttribute('role','tab');b.setAttribute('aria-selected',t.id===cur);
+const n=t.q.filter((_,i)=>st.r[t.id+i]).length;b.innerHTML=t.icon+' '+t.name+'<small>'+n+'/'+t.q.length+'</small>';b.onclick=()=>{cur=t.id;render()};el.appendChild(b)})}
+function list(){const t=T.find(x=>x.id===cur),el=document.getElementById('list');el.innerHTML='';let c=0;
+t.q.forEach((it,i)=>{const [l,qq,a]=it;if(lvl&&l!==lvl)return;if(q&&!(qq+a).toLowerCase().includes(q))return;c++;
+const id=t.id+i,d=document.createElement('div');d.className='item'+(st.r[id]?' done':'');
+d.innerHTML='<button class="qh" aria-expanded="false"><span class="lv '+l+'">'+L[l]+'</span><span class="t">'+esc(qq)+'</span><span class="chev">▾</span></button><div class="ans">'+fmt(a)+'<div class="act"><button class="btn'+(st.r[id]?' on':'')+'">'+(st.r[id]?'✓ راجعته':'علّم إنك راجعته')+'</button></div></div>';
+const h=d.querySelector('.qh');h.onclick=()=>{const o=d.classList.toggle('open');h.setAttribute('aria-expanded',o)};
+d.querySelector('.btn').onclick=()=>{st.r[id]=!st.r[id];save();render()};el.appendChild(d)});
+if(!c)el.innerHTML='<div class="empty">مفيش نتايج. جرب كلمة تانية.</div>'}
+function projs(){document.getElementById('proj').innerHTML=P.map(p=>'<article class="proj"><h3>'+esc(p.title)+'</h3><div class="meta"><span class="tag">'+p.level+'</span><span class="tag">⏱ '+p.time+'</span>'+p.tools.map(x=>'<span class="tag">'+esc(x)+'</span>').join('')+'</div><p>'+esc(p.brief)+'</p><h4>البيانات</h4><p>'+esc(p.data)+'</p><h4>الخطوات</h4><ul class="chk">'+p.steps.map((s,i)=>'<li><label><input type="checkbox" data-k="'+p.id+'-'+i+'"'+(st.p[p.id+'-'+i]?' checked':'')+'><span>'+esc(s)+'</span></label></li>').join('')+'</ul><h4>اللي هتسلّمه</h4><ul>'+p.deliver.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul><div class="tipbox">💡 '+esc(p.tip)+'</div></article>').join('');
+document.querySelectorAll('#proj input').forEach(i=>i.onchange=()=>{st.p[i.dataset.k]=i.checked;save()})}
+document.getElementById('guide').innerHTML=G.map(g=>'<div class="gc"><h3>'+esc(g[0])+'</h3><p>'+esc(g[1])+'</p></div>').join('');
+function render(){fields();tabs();list();prog()}
+document.getElementById('s').oninput=e=>{q=e.target.value.trim().toLowerCase();list()};
+document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const l=c.dataset.l;lvl=lvl===l?null:l;document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x.dataset.l===lvl));list()});
+{const h=(location.hash||'').slice(1),sv=FS.some(x=>x.id===h)?h:(FS.some(x=>x.id===st.f)?st.f:null);if(sv)setField(sv,true)}
+render();projs();
+</script>
+<script src="mock.js"></script>
+</body>
+</html>
